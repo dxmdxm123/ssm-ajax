@@ -8,50 +8,21 @@ import java.util.List;
 
 public class AdminInfo {
     private String adminName;
-    private String adminPwd;
-    private String adminPwdR;
-    //因为前端过来的参数是个 字符串，所以 这里要 做个类型转换
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date adminTime;
-
+    private String adminPwd;
     private List<Lover> loverList;
-    private Integer[] aiHao;   //1.写代码 2.看书  3.读报纸
-
-    private String sex;
-    private String hobby;
-    private String jiuye;
-    private String zhuan;
+    private Integer[] aihao; // 1.吃 2.喝 3.玩
 
     @Override
     public String toString() {
         return "AdminInfo{" +
                 "adminName='" + adminName + '\'' +
-                ", adminPwd='" + adminPwd + '\'' +
-                ", adminPwdR='" + adminPwdR + '\'' +
                 ", adminTime=" + adminTime +
+                ", adminPwd='" + adminPwd + '\'' +
                 ", loverList=" + loverList +
-                ", aiHao=" + Arrays.toString(aiHao) +
-                ", sex='" + sex + '\'' +
-                ", hobby='" + hobby + '\'' +
-                ", jiuye='" + jiuye + '\'' +
-                ", zhuan='" + zhuan + '\'' +
+                ", aihao=" + Arrays.toString(aihao) +
                 '}';
-    }
-
-    public List<Lover> getLoverList() {
-        return loverList;
-    }
-
-    public void setLoverList(List<Lover> loverList) {
-        this.loverList = loverList;
-    }
-
-    public Integer[] getAiHao() {
-        return aiHao;
-    }
-
-    public void setAiHao(Integer[] aiHao) {
-        this.aiHao = aiHao;
     }
 
     public String getAdminName() {
@@ -62,22 +33,6 @@ public class AdminInfo {
         this.adminName = adminName;
     }
 
-    public String getAdminPwd() {
-        return adminPwd;
-    }
-
-    public void setAdminPwd(String adminPwd) {
-        this.adminPwd = adminPwd;
-    }
-
-    public String getAdminPwdR() {
-        return adminPwdR;
-    }
-
-    public void setAdminPwdR(String adminPwdR) {
-        this.adminPwdR = adminPwdR;
-    }
-
     public Date getAdminTime() {
         return adminTime;
     }
@@ -86,35 +41,27 @@ public class AdminInfo {
         this.adminTime = adminTime;
     }
 
-    public String getSex() {
-        return sex;
+    public String getAdminPwd() {
+        return adminPwd;
     }
 
-    public void setSex(String sex) {
-        this.sex = sex;
+    public void setAdminPwd(String adminPwd) {
+        this.adminPwd = adminPwd;
     }
 
-    public String getHobby() {
-        return hobby;
+    public List<Lover> getLoverList() {
+        return loverList;
     }
 
-    public void setHobby(String hobby) {
-        this.hobby = hobby;
+    public void setLoverList(List<Lover> loverList) {
+        this.loverList = loverList;
     }
 
-    public String getJiuye() {
-        return jiuye;
+    public Integer[] getAihao() {
+        return aihao;
     }
 
-    public void setJiuye(String jiuye) {
-        this.jiuye = jiuye;
-    }
-
-    public String getZhuan() {
-        return zhuan;
-    }
-
-    public void setZhuan(String zhuan) {
-        this.zhuan = zhuan;
+    public void setAihao(Integer[] aihao) {
+        this.aihao = aihao;
     }
 }
